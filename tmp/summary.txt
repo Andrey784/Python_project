@@ -1,0 +1,122 @@
+Model: "Decoder"
+
+_________________________________________________________________
+
+ Layer (type)                Output Shape              Param #   
+
+=================================================================
+
+ input_8 (InputLayer)        [(None, 56)]              0         
+
+                                                                 
+
+ dense_5 (Dense)             (None, 4096)              233472    
+
+                                                                 
+
+ reshape_4 (Reshape)         (None, 4, 4, 256)         0         
+
+                                                                 
+
+ up_sampling2d_4 (UpSampling  (None, 8, 8, 256)        0         
+
+ 2D)                                                             
+
+                                                                 
+
+ conv2d_29 (Conv2D)          (None, 8, 8, 256)         590080    
+
+                                                                 
+
+ leaky_re_lu_31 (LeakyReLU)  (None, 8, 8, 256)         0         
+
+                                                                 
+
+ conv2d_30 (Conv2D)          (None, 8, 8, 256)         590080    
+
+                                                                 
+
+ leaky_re_lu_32 (LeakyReLU)  (None, 8, 8, 256)         0         
+
+                                                                 
+
+ up_sampling2d_5 (UpSampling  (None, 16, 16, 256)      0         
+
+ 2D)                                                             
+
+                                                                 
+
+ conv2d_31 (Conv2D)          (None, 16, 16, 128)       295040    
+
+                                                                 
+
+ leaky_re_lu_33 (LeakyReLU)  (None, 16, 16, 128)       0         
+
+                                                                 
+
+ conv2d_32 (Conv2D)          (None, 16, 16, 128)       147584    
+
+                                                                 
+
+ leaky_re_lu_34 (LeakyReLU)  (None, 16, 16, 128)       0         
+
+                                                                 
+
+ up_sampling2d_6 (UpSampling  (None, 32, 32, 128)      0         
+
+ 2D)                                                             
+
+                                                                 
+
+ conv2d_33 (Conv2D)          (None, 32, 32, 64)        73792     
+
+                                                                 
+
+ leaky_re_lu_35 (LeakyReLU)  (None, 32, 32, 64)        0         
+
+                                                                 
+
+ conv2d_34 (Conv2D)          (None, 32, 32, 64)        36928     
+
+                                                                 
+
+ leaky_re_lu_36 (LeakyReLU)  (None, 32, 32, 64)        0         
+
+                                                                 
+
+ up_sampling2d_7 (UpSampling  (None, 64, 64, 64)       0         
+
+ 2D)                                                             
+
+                                                                 
+
+ conv2d_35 (Conv2D)          (None, 64, 64, 32)        18464     
+
+                                                                 
+
+ leaky_re_lu_37 (LeakyReLU)  (None, 64, 64, 32)        0         
+
+                                                                 
+
+ conv2d_36 (Conv2D)          (None, 64, 64, 32)        9248      
+
+                                                                 
+
+ leaky_re_lu_38 (LeakyReLU)  (None, 64, 64, 32)        0         
+
+                                                                 
+
+ conv2d_37 (Conv2D)          (None, 64, 64, 3)         2403      
+
+                                                                 
+
+=================================================================
+
+Total params: 1,997,091
+
+Trainable params: 1,997,091
+
+Non-trainable params: 0
+
+_________________________________________________________________
+
